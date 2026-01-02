@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+  <title>Fox Jones – Official Music Website | Electronic Hip-Hop Artist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Official website of Fox Jones - electronic, hip-hop, and experimental music artist. Stream songs like Cool Fox, What Are You Doing, And I Say Yeah, and shoes. Find all lyrics and music on Spotify, Apple Music, YouTube Music, and SoundCloud. Does NOT have an Instagram.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://foxjonesmusic.github.io/">
+  <meta property="og:title" content="Fox Jones – Official Music Website">
+  <meta property="og:description" content="Electronic, hip-hop, and experimental music artist. Stream Cool Fox, What Are You Doing, And I Say Yeah, and more. Does NOT have an Instagram.">
+  <meta property="og:image" content="https://rafdo.netlify.app/images/fox.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://foxjonesmusic.github.io/">
+  <meta property="twitter:title" content="Fox Jones – Official Music Website">
+  <meta property="twitter:description" content="Electronic, hip-hop, and experimental music artist. Stream Cool Fox, What Are You Doing, And I Say Yeah, and more. Does NOT have an Instagram.">
+  <meta property="twitter:image" content="https://rafdo.netlify.app/images/fox.jpg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://foxjonesmusic.github.io/">
+  
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MusicGroup",
+    "name": "Fox Jones",
+    "genre": ["Electronic", "Hip-Hop", "Experimental", "Rock"],
+    "url": "https://foxjonesmusic.github.io",
+    "image": "https://rafdo.netlify.app/images/fox.jpg",
+    "sameAs": [
+      "https://soundcloud.com/foxjones",
+      "https://open.spotify.com/artist/61vVAQP27OexBpwvFpAdoV",
+      "https://music.apple.com/us/artist/fox-jones/1525158963",
+      "https://youtube.com/@foxjonesmusic"
+    ],
+    "description": "Electronic, hip-hop, and experimental music artist known for Cool Fox, What Are You Doing, And I Say Yeah, and shoes."
+  }
+  </script>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      background: #050509;
+      color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: #42b9ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 20px 24px;
+      border-bottom: 1px solid #222;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .logo-block h1 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+    }
+
+    .logo-block p {
+      margin: 0;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    nav {
+      display: flex;
+      gap: 14px;
+    }
+
+    nav a.active {
+      border-bottom: 1px solid #42b9ff;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 20px 60px;
+    }
+
+    /* ABOUT SECTION */
+    .about-section {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .about-section img {
+      width: 180px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 2px solid #222;
+    }
+
+    .about-text {
+      max-width: 600px;
+      font-size: 15px;
+      line-height: 1.5;
+      color: #ddd;
+    }
+
+    .disclaimer {
+      margin-top: 14px;
+      padding: 12px;
+      background: #1a1a22;
+      border-left: 3px solid #ff4f4f;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #ffbcbc;
+    }
+
+    /* RELEASE CARDS */
+    .release {
+      border-radius: 10px;
+      border: 1px solid #222;
+      padding: 16px;
+      background: #0b0b10;
+      margin-bottom: 20px;
+    }
+
+    .release-header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .release-header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .release-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .release-type {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 2px;
+    }
+
+    .release-date {
+      font-size: 12px;
+      color: #888;
+      margin-top: 4px;
+    }
+
+    .release-links {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    /* TRACKLIST */
+    .tracklist {
+      margin-top: 12px;
+      padding-left: 20px;
+    }
+
+    .track {
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .lyrics-button {
+      margin-left: 8px;
+      padding: 3px 8px;
+      background: #222;
+      border-radius: 6px;
+      font-size: 12px;
+      cursor: pointer;
+      color: #42b9ff;
+    }
+
+    .lyrics-button:hover {
+      background: #333;
+    }
+
+    /* LYRICS MODAL */
+    #lyrics-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    #lyrics-box {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 600px;
+      width: 90%;
+      max-height: 80%;
+      overflow-y: auto;
+      border: 1px solid #333;
+    }
+
+    #lyrics-box pre {
+      white-space: pre-wrap;
+      font-family: inherit;
+      color: #ddd;
+      margin-top: 10px;
+    }
+
+    /* SCROLL TO TOP BUTTON */
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #42b9ff;
+      color: #000;
+      padding: 10px 14px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      border: none;
+      font-weight: bold;
+    }
+
+    footer {
+      border-top: 1px solid #222;
+      padding: 14px 20px;
+      text-align: center;
+      font-size: 11px;
+      color: #777;
+    }
+
+    #links {
+       background: #0b0b10;
+      border-radius: 10px;
+      color: #222;
+      padding: 20px;
+      border: 10px double #333;
+    }
+    .logo-container {
+  display: flex;
+  align-items: center; /* This aligns them vertically in the center */
+  justify-content: center; /* This keeps them centered on the page */
+  gap: 20px; /* This adds even spacing between them */
+}
+.social-links a {
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.social-links a:hover {
+  transform: translateY(-4px);
+}
+
+.social-links img {
+  filter: none; /* Remove the invert */
+  display: block;
+}
+/* Container for the logos */
+.social-links {
+  display: flex;
+  justify-content: center; /* Centers them horizontally */
+  align-items: center;     /* Centers them vertically against each other */
+  gap: 20px;               /* Adds space between the logos */
+  flex-wrap: wrap;         /* Allows them to stack if the screen is tiny */
+  margin: 20px 0;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo-block">
+      <h1>Fox Jones</h1>
+      <p>Electronic • Hip-Hop • Experimental • Rock</p>
+    </div>
+    <nav>
+      <a href="#" id="nav-home" class="active">Home</a>
+      <a href="#" id="nav-music">Music</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HOME -->
+    <section id="view-home">
+      <h2>About Fox Jones</h2>
+
+      <div class="about-section">
+        <img src="https://rafdo.netlify.app/images/fox.jpg" alt="Photo of Fox Jones">
+
+        <div class="about-text">
+          <p>
+            Fox Jones is an electronic and hip-hop artist blending experimental production, glitchy textures, and
+            playful chaos.
+            Known for tracks like <em>Cool Fox</em>, <em>What Are You Doing</em>, <em>And I Say Yeah</em>, and
+            <em>shoes (feat. cool alex 7030)</em>.
+          </p>
+
+          <div class="disclaimer">
+            ⚠️ <strong>Important:</strong> There is another artist online using the name “Fox Jones” with a SoundCloud
+            and Instagram.
+            Those accounts are <strong>NOT</strong> me.
+            My real SoundCloud is here:
+            <a href="https://soundcloud.com/foxjones" target="_blank">soundcloud.com/foxjones</a>
+            I do not have an Instagram.
+          </div>
+        </div>
+        <br>
+      </div>
+      
+    <div id="links" class="social-links logo-container">
+    <a href="https://youtube.com/@foxjonesmusic"><img src="https://logos-world.net/wp-content/uploads/2020/06/YouTube-Logo.png" alt="YouTube Music Logo" width=200></a>
+    <a href="https://open.spotify.com/artist/61vVAQP27OexBpwvFpAdoV?si=yhrqVQPRQjeWYHCxm1YOWQ"><img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Full_Logo_RGB_Green.png" alt="Spotify Logo" width=200></a>
+    <a href="https://music.apple.com/us/artist/fox-jones/1525158963"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCnlJ9HC8Zfbes1lBIkgqXq1Jiwvpro6zzg&s" alt="Apple Music Logo" width="120"></a>
+    <a href="https://music.amazon.com/artists/B08WK677BV/fox-jones"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9ZXs-pFvvBVx3cpXgvhuIkWQoWwOdovVPKg&s" alt="Amazon Music Logo" width="150"></a>
+    <a href="https://tidal.com/artist/23512690"><img src="https://1000logos.net/wp-content/uploads/2021/05/Tidal-logo.png" alt="Tidal Logo" width="100"></a>
+    <a href="https://www.deezer.com/artist/123384982"><img src="https://logos-world.net/wp-content/uploads/2021/05/Deezer-Logo.png" alt="Deezer Logo" width=150></a>
+    <a href="https://www.qobuz.com/nz-en/interpreter/fox-jones/16505930"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_CRUOsJwQwjcjP_nGJJsPb1AufAKM97dvag&s" alt="Qobuz Logo" width="150"></a>
+    <a href="https://www.pandora.com/artist/fox-jones/ARPz7dc6jvj4jXw"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ29_s4FB9tUVIyoFQkUwlTGCugecFbJmZNdg&s" alt="Pandora Logo" width=100></a>
+    <a href="https://www.iheart.com/artist/fox-jones-35790031/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT97041H45Uye8vHsDkzprWFpO1BYrL31EOIQ&s" alt="iHeart Radio Logo" width=100></a>
+    <a href="https://soundcloud.com/foxjones"><img src="https://images.seeklogo.com/logo-png/15/2/soundcloud-logo-png_seeklogo-157945.png" alt="SoundCloud Logo" width=150></a>
+    </div>
+    </section>
+        
+
+    <!-- MUSIC -->
+    <section id="view-music" style="display:none;">
+      <h2>Discography</h2>
+      <div id="release-list"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    © <span id="year"></span> Fox Jones
+  </footer>
+
+  <!-- LYRICS MODAL -->
+  <div id="lyrics-modal">
+    <div id="lyrics-box">
+      <h2 id="lyrics-title"></h2>
+      <pre id="lyrics-text"></pre>
+      <button onclick="closeLyrics()" style="
+      margin-top:20px;
+      padding:8px 16px;
+      background:#42b9ff;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      color:#000;
+      font-weight:600;
+    ">Close</button>
+    </div>
+  </div>
+
+  <!-- SCROLL TO TOP BUTTON -->
+  <button id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    const ONE_LYRICS = `
+There's no argument for the state of matter, so you should suffer, it just makes sense
+There's no argument to keep the universal clock, so let the time stop, it just makes sense
+
+That's what the universe keeps telling me, oh oh
+I don't know why, the universe's laws don't even apply
+
+Why did this happen to me
+Why am I the one
+Why am I the one
+Why am I the one
+
+There's no argument for the state of matter, so you should suffer, it just makes sense
+There's no argument to keep the universal clock, so let the time stop, it just makes sense
+
+Mr. Universe, that doesn't make any sense, I don't think that it does to anyone but you
+Mr. Universe, don't destroy your laws, I don't think that this action even has a justifiable cause
+Mr. Universe, stop this immediately
+All of us are suffering, which includes the ones who don't deserve it
+Help me, help me, help me, help me
+`
+    // ---- RELEASE DATA ----
+    const releases = [
+      {
+        title: "shoes (ft. cool alex 7030)",
+        type: "Single",
+        date: "October 6, 2025",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D856F6372%2D5086%2D4EA0%2DB796B6C5C1A8BAB3%2D%2D0%2D%2D7916557%2D%2Dshoe.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/shoes-feat-cool-alex-7030",
+        soundcloud: "https://soundcloud.com/foxjones/shoes",
+        lyrics: `
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+
+Shoes are the best thing in the world as my friend Alex says, Alex says
+'Cause they're the best thing in the world as my friend Alex says, Alex says
+
+I've been deceived, everyone's out to kill me
+But my shoes, they will protect me
+From any fireballs hurled
+In the entire world
+
+What the sigpoo, where the heck are my shoes
+
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+Shoe, shoe, shoe shoe shoe
+Shoes are the best thing in the world
+
+Shoes! Shoe, shoe, shoe, shoe, shoe!
+Shoes! Shoes! Shoes!
+Shoes!
+`
+      },
+
+      {
+        title: "MONTAGEM FORMA",
+        type: "Single",
+        date: "November 22, 2025",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2DDF6FC5C9%2D788B%2D4D75%2DAAF1BA7B8A5A979D%2D%2D0%2D%2D3912896%2D%2Dmonty.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/montagem-forma",
+        soundcloud: "https://soundcloud.com/foxjones/montagem-forma",
+        lyrics: `
+Forma, forma, form-a-a-a-a-a
+Forma, forma, form-a-a-a-a-a
+Forma, forma, form-a-a-a-a-a
+
+Forma, forma, forma, forma, forma, forma, forma, forma
+Forma, forma, forma, forma, forma, forma, forma, forma
+Forma, forma, forma, forma, forma, forma, forma, forma
+Forma, forma, forma, forma, forma, forma, forma, forma
+
+De uma, de uma, de uma, de uma
+De uma, de uma, de uma forma
+Forma forma forma forma
+Forma forma forma forma
+
+Forma, forma, forma, forma, forma, forma, forma, forma
+Forma, forma, forma, forma, forma, forma, forma, forma
+Forma, forma, forma, forma, forma, forma, forma, forma
+Forma, forma, forma, forma, forma, forma, forma, forma
+
+De uma forma-a-a-a
+De uma forma-a-a-a
+De um- de um- de uma
+De uma forma-a-a-a
+
+De um- de um- de uma, form- form- forma
+De um- de um- de uma, form- form- forma
+De uma forma, de uma forma
+De uma forma, de uma forma
+`
+      },
+
+      {
+        title: "One",
+        type: "EP",
+        date: "September 9, 2025",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D2F4B115D%2DCCCA%2D4C2E%2DBDEFD9404B73F624%2D%2Dmod%2D1760541156.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/masterpiece",
+        soundcloud: "https://soundcloud.com/foxjones/sets/one-ep",
+        tracks: [
+          { title: "One (ft. cool alex 7030)", lyrics: ONE_LYRICS },
+          { title: "One - Sped Up", lyrics: ONE_LYRICS },
+          { title: "One - Nightcore Version", lyrics: ONE_LYRICS },
+          { title: "One - Slowed+Reverb", lyrics: ONE_LYRICS },
+          { title: "Call Me (ft. cool alex 7030)" },
+          {
+            title: "ANGELS", lyrics: `
+Angels! Angels! Angels! Angels
+They're there, they're weird, they're gross
+They're not just babies
+They're angels
+` }
+        ]
+      },
+      {
+        title: "Anti Lag",
+        type: "Single",
+        date: "August 27, 2025",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D939C2A0A%2DEDC8%2D4CCB%2DA9C1AB84330D98DA%2D%2D0%2D%2D6049945%2D%2DAntilag.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/anti-lag",
+        soundcloud: "https://soundcloud.com/foxjones/anti-lag",
+        lyrics: `
+Assistance needed!
+
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+
+Assistance needed!
+
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh
+
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+
+Assistance needed!
+
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+
+Assistance needed!
+
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+Oh, oh, oh, oh, oh, oh, oh, oh
+`
+      },
+      {
+        title: "in (side out)",
+        type: "Single",
+        date: "August 21, 2025",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D00F38A06%2D9245%2D4EDB%2D9E4A73BED849AF65%2D%2D0%2D%2D332356%2D%2Din.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/in/",
+        soundcloud: "https://soundcloud.com/foxjones/in-side-out",
+        lyrics: `
+We're going in
+
+Okay, man, you want to know something
+You don't make me laugh
+Go do something stupid, like become part of McDonald's staff
+
+There you'll serve burgers to people of lower class
+While everybody else is out there behind that precious glass
+
+Because of something,
+and something,
+and something,
+and something,
+and something else
+
+I might be saying something
+Until all hell's
+
+Broke loose, I'm a hacker (Wooh!)
+To introduce, I'm a rapper
+When I write, I'm an author (Ye)
+When I film, I'm director
+
+You don't know how long it's been
+(Actually, it hasn't even been very long, not gonna lie)
+I can't even begin
+(What do you mean? I can begin, I can start talking about all kinds of things)
+With this song, I will win
+(Nah, I'll prob'ly lose)
+And with this command, I'm in
+
+What is that supposed to mean?
+It's not like I'm a hacker or anything
+What do you mean, I'm yapping too loud and you can't hear the song?
+I'm not yapping at all; in fact, I'm being perfectly silent
+You can just hear the song just fine
+It's not like I'm yelling over it or something-AAAAA
+
+I'm in
+
+Everybody's talking about this one little thing that
+Apparently, it makes your enemies go splat
+
+I don't believe it, but I'm open to suggestion
+Something that answers the question in question
+
+What am I even talking about?
+I'm just tryna rhyme, but I'm really just yappin'
+It's like we just got out of a drought
+And I'm just hoping it's never gonna happen again
+
+Uh, what am I saying?
+Is there a message I'm portraying?
+Is there someone I'm betraying?
+Because it sure seems like that everything is decaying (We're going in)
+
+So, the song's basically over now; you can stop listening
+There's nothing else, really, so just go 'head and stop listening
+Turn off your phone, or listen to something else
+I don't know, I don't care
+This song is basically over now, you know
+
+Well, what are you doing?
+Go get ahead and stop listening to this song, seriously
+There's nothing more to listen to; it's over
+Seriously, literally, there's nothing more in this song
+Why are you- why are you still listening
+Get off
+Look, even the background stuff stopped; it's just me talking
+The song is over, stop listening
+
+Okay, do I have to make you? Song, over.
+`},
+      {
+        title: "Suffer All The Time (feat. Sharkman)",
+        type: "Single",
+        date: "August 13, 2025",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D00A4D9C4%2D4CDC%2D41AC%2D95C85CFB74591ABA%2D%2D0%2D%2D6884330%2D%2Dshman.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/suffer-all-the-time-feat-sharkman",
+        soundcloud: "https://soundcloud.com/foxjones/suffer-all-the-time-ft-sharkman",
+        lyrics: `
+Err, all the time
+Suffer, 'till you die
+Suffer, all the time
+Suffer, 'till you die
+
+Suffer, suffer, suffer, suffer, suffer
+Suffer, suffer, suffer, suffer, suffer
+Suffer, suffer, suffer, suffer, suffer
+
+Suffer all the time, suffer all while we're alive
+Suffer, suffer all the time while we're alive
+Suffer, suffer, suffer, suffer, suffer, suffer, suffer, suffer, suffer, suffer, suffer (AAAAAH)
+`
+      },
+      {
+        title: "Cool Fox (feat. cool alex 7030)",
+        type: "Single",
+        date: "February 9, 2025",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D3E829E8B%2D03CF%2D4FBA%2DB0C17765E18E8D65%2D%2D0%2D%2D2323793%2D%2Dcoolfox.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/cl-fox-feat-alex",
+        soundcloud: "https://soundcloud.com/foxjones/cool-fox",
+        lyrics: `
+(Coolness to da max)
+
+I go over, open my laptop
+After charging, the battery is at it's top
+I see some text that says Cool Fox
+Enter my password in the password box
+
+I see a message pop up on my screen
+It says, the current time is 10:18
+I say whatever, and then I close it
+'Cause you know what, I already know it!
+
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool (Cool Fox!)
+
+Hey
+You know what
+I'm cool
+Call me Cool Fox
+
+When I tell them to leave, they always leave
+'Cause I'm cool, 'cause I'm cool, 'cause I'm, 'cause I'm, 'cause I'm cool
+Yeah, yeah, yeah, yeah, yeah
+Y y y y y y y y y y y y yeah
+
+Cool
+Fox
+Cool
+Fox
+
+Hip, hop
+Hip, hop
+Hip, hop
+Hip, hop
+
+I don't make the best songs
+But I am cool
+Look at me, look at my face
+You see, I'm cool (WHA)
+
+They think they can beat me
+But I am cool
+They think they can defeat me
+But I am cool
+
+Cool, cool, I'm Cool Fox and I'm cool
+
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool (Cool, cool, cool cool cool cool cool)
+
+Fox is cool, Fox is cool
+Everybody thinks Fox is cool
+Fox is cool, Fox is cool
+Everybody thinks Fox is cool
+
+Fox is cool, Fox is cool
+Everybody thinks Fox is cool
+Fox is cool, Fox is cool
+Everybody thinks Fox is cool
+
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+I'm cool, I'm cool, I I I I I'm cool
+
+(Nope, we do not care)
+`
+      },
+      {
+        title: "Watch Out!",
+        type: "Album",
+        date: "December 20, 2024",
+        art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D2B3971FA%2DF5FE%2D4A55%2D8C7180888BC3EE12%2D%2D0%2D%2D2378820%2D%2Dwatchout.jpg",
+        distrokid: "https://distrokid.com/hyperfollow/foxjones/watch-out",
+        soundcloud: "https://soundcloud.com/foxjones/sets/watch-out",
+        tracks: [
+          {
+            title: "The Roaches", lyrics: `
+The roaches are coming
+The roaches are coming (cockroaches!)
+The roaches are coming
+The roaches are coming
+
+(Let's go)
+
+The roaches, they're rolling on my foot, yaah
+I'll never have a chance to tell one gotcha- a
+I really hate these roaches but there's nothing I can do- do
+If you were me, then tons of roaches would be swarming 'round you!
+
+The roaches are coming
+The roaches are coming
+The roaches are coming
+The roaches are coming
+
+The roaches are coming
+The roaches are coming
+The roaches are coming
+The roaches are coming
+
+The roaches are coming
+The roaches are coming
+The roaches are coming
+The roaches are coming
+
+The roaches are coming
+The roaches are coming
+The roaches are coming
+The roaches are coming
+`}, {
+            title: "Drowning In The Spit",
+            lyrics: `
+I'm drowning in the spit!
+I'm drowning in the spit!
+I'm drowning in the spit!
+I'm drowning in the spit!
+
+I was drooling when I realized, I left my shrinking machine on
+Too late that I realized, and I was left at small size
+I was inside my own spit, swimming around desperately for help
+But it was no use, I started drowning in my own spit
+
+I'm drowning in the spit!
+I'm drowning in the spit!
+I'm drowning in the spit!
+I'm drowning in the spit!
+I'm drowning in the spit
+
+No one can help me, I'm drowning in the spit
+
+I was drooling when I realized, I left my shrinking machine on
+Too late that I realized, and I was left at small size
+I was inside my own spit, swimming around desperately for help
+But it was no use, I started drowning in my own spit
+
+I'm drowning in the spit!
+`}, {
+            title: "What Are You Doing (feat. cool alex 7030)",
+            lyrics: `
+First you're reading a book and now you're
+Asking to be the cook and now you're
+Scrolling on your phone and now you're
+Saying it tastes like styrofoam, what are you doing?
+
+It keeps changing too much
+What are you doing now
+I can't keep up with it (WHA)
+What are you doing now
+
+What are you doing
+
+I think I'm going crazy
+My son spent one hour looking at a berry
+In front of some guy named Terry
+Who was laughing unsanitarily
+
+And now he's pretending to fart, and saying
+"I just farted again"
+Which kinda makes me wanna crack up
+But it's also kinda annoying
+Because there are chores he's supposed to be doing
+
+Oh my gosh, I can feel it rising up inside me
+I can't push it down, it's rising up inside me
+I feel I'm going crazy, crazy, crazy
+I can't stop it, it's coming up inside me, AAAAA-
+
+You spend one hour looking at a stationary object
+And only 3 seconds on what you're supposed to be doing
+What the heck is that sound, is that the sound of a siren?
+Oh my gosh, what are you doing, Alex, it keeps changing so much
+WHAT ARE YOU DOING
+
+(I don't know what I'm doin', poo-poo)
+AAAAAAAAAAAAAAAAAAAA
+`}, {
+            title: "A Trick"
+          },
+          {
+            title: "Factor-E"
+          },
+          { title: "Untitled" },
+          {
+            title: "What The Heck Is Happening", lyrics: `
+Wha, wha, what the heck is happening
+Wha, wha, what the heck is happening
+`}, {
+            title: "The Juice Song", lyrics: `
+Apple juice, orange juice, all the other kinds of juice
+Apple juice, orange juice, all the other kinds of juice
+Apple juice, orange juice, all the other kinds of juice
+Apple juice, orange juice, all the other kinds of juice
+`
+          }, {
+            title: "Watch Out!"
+          }
+        ]
+      }
+,
+{
+  title: "Radioactivity",
+  type: "Single",
+  date: "November 19, 2024",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D8121816D%2D4C0C%2D4B7A%2DB2BF7F5C6D92CA04%2D%2D0%2D%2D5794798%2D%2Dradioactivity.jpg",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/radioactivity",
+  soundcloud: "https://soundcloud.com/foxjones/radioactivity"
+},
+{
+  title: "And I Say Yeah",
+  type: "Single",
+  date: "July 31, 2024",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D7184A1CE%2D9DD0%2D40E3%2DB850199900278987%2D%2D0%2D%2D1533259%2D%2Dy.jpg",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/and-i-say-yeah",
+  soundcloud: "https://soundcloud.com/foxjones/and-i-say-yeah",
+  lyrics:
+`
+I agree with him, so I say
+
+And I say yeah, yeah, yeah, yeah
+Yeah, yeah, yeah-yeah
+Yeah, yeah, yeah-yeah
+Yeah
+
+And he say yeah, yeah, yeah, yeah
+Yeah, yeah, yeah-yeah
+Yeah, yeah, yeah-yeah
+Yeah
+
+And I say yeah, yeah, yeah, yeah
+Yeah, yeah, yeah-yeah
+Yeah, yeah, yeah-yeah
+Yeah
+
+And he say yeah, yeah, yeah, yeah
+Yeah, yeah, yeah-yeah
+Yeah, yeah, yeah-yeah
+Yeah
+
+And I say yeah, and he say yeah
+And I say yeah, and he say yeah
+And I say yeah, and he say yeah
+And I say yeah, and he say yeah
+
+And I say, subscribe
+`
+},
+
+{
+  title: "MILES AWAY",
+  date: "February 9, 2024",
+  type: "Single",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D4CD78E11%2D9F6B%2D4180%2DB1C1F1CE7B5E7AF4%2D%2D0%2D%2D4616164%2D%2Dmilesaway.jpg",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/miles-away-2",
+  soundcloud: "https://soundcloud.com/foxjones/miles-away"
+},
+{
+  title: "with my ax in hand",
+  date: "January 3, 2024",
+  type: "Single",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D0D59072D%2D5C55%2D4D3D%2D94701A90DDF58E2C%2D%2D0%2D%2D1549812%2D%2Dwithmyaxinhand.jpg",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/with-my-ax-in-hand",
+  soundcloud: "https://soundcloud.com/foxjones/with-my-ax-in-hand"
+},
+{
+  title: "Suffer Song",
+  date: "January 2, 2024",
+  type: "Single",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/suffer-song",
+  soundcloud: "https://soundcloud.com/foxjones/suffer-song",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D555849AF%2D471F%2D43DF%2D9FC0CC52FFB03C40%2D%2D0%2D%2D645884%2D%2Dsquaresuffer.jpg",
+  lyrics: `
+Suffer!
+Suffer!
+Yeah!
+Suffer!
+
+Suffer like you're in Gehenna
+Suffer all the time
+Suffer on June 11th
+'Cause that's the suffer time
+
+My pa's birthday's the day of suffer
+'Cause he was meant to be a slave
+'Cording to some random publisher
+With a trademarked name
+
+But anyway there's bills to pay
+And I see a myriad of them
+So do 'em all, 'cause that is
+A primitive form of suffering, so
+
+Suffer like you're in Gehenna
+Oh, suffer all the time
+So, suffer on June 11th, that day 'cause
+That's the suffer time, it is
+
+Hangin' up on bars, about
+Fifty yards high, yeah
+Get a shot of life-long scars
+Livin' happy is a lie, yes
+
+Suffer in the freezer
+Or in Texas summer
+Whichever one'll do 'cause of the
+Extreme temperatures
+
+Oh, yeah
+Suffer!
+Do it, suffer!
+You gotta suffer!
+
+Yo!
+Suffer, Suffer!
+Suffer!
+S-U-F-F-E-R
+
+In death, it's like you have to die and suffer to live
+(Suffer)
+`
+},
+{
+  title: "Rosie Posie Confirmed",
+  date: "December 23, 2023",
+  type: "Single",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D84BFB4B2%2D2EF2%2D493F%2DB9382262D7E64F11%2D%2D0%2D%2D5595179%2D%2Dwosieposie.jpg",
+  lyrics:
+`
+Rosie (unce, unce)
+Rosie Posie (unce)
+Mm, mm
+
+Rosie (unce, unce)
+Rosie Posie (unce)
+Mm, mm
+
+Rosie (unce, unce)
+Rosie Posie (unce)
+Mm, mm
+
+Rosie (unce, unce)
+Rosie Posie (unce)
+Mm, mm
+
+She's a dog, she's a dog, she's a dog, she's a dog
+She's a dog, she's a dog, she's a dog
+
+She's a dog, she's a dog, she's a dog, she's a dog
+She's a dog, she's a dog, she's a dog
+
+Rosie (unce, unce)
+Rosie Posie (unce)
+Mm, mm
+
+Rosie (unce, unce)
+Rosie Posie (unce)
+Mm, mm
+
+Rosie (unce, unce)
+Rosie Posie (unce)
+Mm, mm
+
+Rosie (unce, unce)
+Rosie Posie (unce, unce, unce)
+`, 
+distrokid: "https://distrokid.com/hyperfollow/foxjones/rosie-posie-confirmed",
+soundcloud: "https://soundcloud.com/foxjones/rosie-posie-confirmed"
+},
+{
+  title: "Me Of Life",
+  type: "Single",
+  date: "February 12, 2021",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2DBA301242%2D7407%2D43B1%2D91A041C2D92E032B%2D%2D1613175198282%2D%2DMEOFLIFE.jpg",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/me-of-life",
+  soundcloud: "https://soundcloud.com/foxjones/me-of-life?si=810c0852deb9441eb4f83f53d3db9704&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+
+},
+{
+  title: "In Space",
+  type: "Single",
+  date: "August 1, 2020",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2DFD2241BB%2DCA5C%2D4C32%2D9D8E739CE0FAF626%2D%2D1596321789055%2D%2DIMG3273.JPG",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/in-space",
+  soundcloud: "https://soundcloud.com/foxjones/in-space"
+},
+{
+  title: "God Oh God",
+  type: "Single",
+  date: "July 26, 2020",
+  art: "https://s3.amazonaws.com/gather.fandalism.com/800x800%2D2073345%2D%2D8FCB25D1%2DD553%2D4807%2DB79C56378D45C681%2D%2D1595808442971%2D%2DIMG3240.JPG",
+  distrokid: "https://distrokid.com/hyperfollow/foxjones/god-oh-god",
+  soundcloud: "https://soundcloud.com/foxjones/god-oh-god",
+  lyrics: "See the lyrics for this song on <a href=https://youtu.be/aJV3yD3jw2k>its official lyric video.</a>"
+}
+
+
+    ];
+    // ---- RENDER RELEASES ----
+    function renderReleases() {
+      const list = document.getElementById("release-list");
+      list.innerHTML = "";
+
+      releases.forEach(r => {
+        const div = document.createElement("div");
+        div.className = "release";
+
+        let lyricsButton = r.lyrics
+          ? `<div class="lyrics-button" onclick="openLyrics('${r.title}', \`${r.lyrics}\`)">Lyrics</div>`
+          : "";
+
+        let tracksHTML = "";
+        if (r.tracks) {
+          tracksHTML = `
+          <div class="tracklist">
+            Tracks:<br><br>
+            ${r.tracks.map(t => `
+              <div class="track">
+                • ${t.title}
+                ${t.lyrics ? `<span class="lyrics-button" onclick="openLyrics('${t.title}', \`${t.lyrics}\`)">Lyrics</span>` : ""}
+              </div>
+            `).join("")}
+          </div>
+        `;
+        }
+
+        div.innerHTML = `
+        <div class="release-header">
+          <img src="${r.art}" alt="${r.title} cover art">
+          <div>
+            <div class="release-title">${r.title}</div>
+            <div class="release-type">${r.type}</div>
+            <div class="release-date">${r.date}</div>
+            <div class="release-links">
+              <a href="${r.distrokid}" target="_blank">HyperFollow</a> ·
+              <a href="${r.soundcloud}" target="_blank">SoundCloud</a>
+              ${lyricsButton}
+            </div>
+          </div>
+        </div>
+        ${tracksHTML}
+      `;
+
+        list.appendChild(div);
+      });
+    }
+
+    // ---- LYRICS MODAL ----
+    function openLyrics(title, lyrics) {
+      document.getElementById("lyrics-title").textContent = title + " Lyrics";
+      document.getElementById("lyrics-text").innerHTML = lyrics || "No lyrics available.";
+      document.getElementById("lyrics-modal").style.display = "flex";
+    }
+
+    function closeLyrics() {
+      document.getElementById("lyrics-modal").style.display = "none";
+    }
+
+    // ---- NAVIGATION ----
+    const views = {
+      home: document.getElementById("view-home"),
+      music: document.getElementById("view-music")
+    };
+
+    function setView(name) {
+      for (const v in views) views[v].style.display = "none";
+      views[name].style.display = "block";
+
+      document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
+      document.getElementById("nav-" + name).classList.add("active");
+    }
+
+    document.getElementById("nav-home").onclick = () => setView("home");
+    document.getElementById("nav-music").onclick = () => setView("music");
+
+    // ---- SCROLL TO TOP BUTTON ----
+    const scrollBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    // ---- INIT ----
+    document.getElementById("year").textContent = new Date().getFullYear();
+    renderReleases();
+  </script>
+
+</body>
+
+</html>
